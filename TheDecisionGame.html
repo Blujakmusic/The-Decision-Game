@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Decision Game | Coin Flipper</title>
+        <style>
+            .color {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Play The Decision Game!</h1>
+        <h2 class="color"><em>Flip the coin to try your luck:</em></h2>
+        <p>
+            <button onclick="flipCoin()">Flip Coin</button>
+            <p id="result"></p>
+
+            <script>
+                function flipCoin() {
+                    const outcomes = ["Heads", "Tails"];
+                    const randomIndex = Math.floor(Math.random() * 2);
+                    const result = outcomes[randomIndex];
+                    const resultElement = document.getElementById("result");
+
+                    resultElement.innerText = "Result: " + result;
+
+                    if (result == "Heads") {
+                        resultElement.innerHTML += "<br>Are you lucky?";
+                    } else {
+                        resultElement.innerHTML += "<br>Was that lucky?";
+                    }
+                }
+            </script>
+        </p>
+    </body>
+</html>
